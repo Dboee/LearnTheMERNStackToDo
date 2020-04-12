@@ -8,7 +8,7 @@ import {
     REGISTER_SUCCESS,
     REGISTER_FAIL
 } from '../actions/types';
-import { bindActionCreators } from 'redux';
+// import { bindActionCreators } from 'redux';
 
 const initialState = {
     token: localStorage.getItem('token'),
