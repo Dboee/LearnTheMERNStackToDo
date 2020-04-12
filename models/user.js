@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 //Define your User Collection Objects Structure
 //With datatypes
 //We'll be using Auth0 for authentication in the future.
-const user = new Schema({
+const UserSchema = new Schema({
     //THis is where the user will login
     //For Now we will be inserting test data
     name: {
@@ -13,18 +13,19 @@ const user = new Schema({
     },
     email: {
         type: String,
-        required: false
+        required: false,
+        unique: true
     },
-    username: {
+    password: {
         type: String,
         required: true
     },
-    auth0_id: {
-        type: String,
-        required: false
+    register_date: {
+        type: Date,
+        default: Date.now
     }
 });
 
 //Export the model on the mongoose.
 //So this model will be inserted to the database.
-module.exports = mongoose.model('User', user)
+module.exports = User= mongoose.model('user', UserSchema)
