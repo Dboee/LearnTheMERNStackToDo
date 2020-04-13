@@ -11,8 +11,6 @@ const app = express();
 // Bodyparser Middleware
 app.use(express.json());
 
-
-console.log(process.env.SECRET_MESSAGE)
 // DB Config and connect
 const db = (process.env.DATABASEURL);
 mongoose
