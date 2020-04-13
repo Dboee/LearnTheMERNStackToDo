@@ -6,7 +6,7 @@ require("dotenv/config");
 
 
 // Users Model
-const User = require("../../models/User");
+const User = require("../../models/User.js");
 
 // @route   POST api/users
 // @desc    Register new user

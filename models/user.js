@@ -28,4 +28,4 @@ const UserSchema = new Schema({
 
 //Export the model on the mongoose.
 //So this model will be inserted to the database.
-module.exports = User= mongoose.model('user', UserSchema)
+module.exports = User = mongoose.model('user', UserSchema)
